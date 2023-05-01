@@ -1,13 +1,13 @@
-import java.util.List;
+import java.util.Map;
 
 public class Part {
     int id;
     String name;
     String description;
-    List<Part> subcomponents;
+    Map<Part, Integer> subcomponents;
 
-    public Part(int id, String name, String description, List<Part> subcomponents) {
-        this.id = id;
+    public Part(String name, String description, Map<Part, Integer> subcomponents) {
+        id = 0;
         this.name = name;
         this.description = description;
         this.subcomponents = subcomponents;
@@ -21,23 +21,11 @@ public class Part {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<Part> getSubcomponents() {
+    public Map<Part, Integer> getSubcomponents() {
         return subcomponents;
-    }
-
-    public void setSubcomponents(List<Part> subcomponents) {
-        this.subcomponents = subcomponents;
     }
 }
