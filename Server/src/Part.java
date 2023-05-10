@@ -1,31 +1,10 @@
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.Map;
 
-public class Part {
-    int id;
-    String name;
-    String description;
-    Map<Part, Integer> subcomponents;
-
-    public Part(String name, String description, Map<Part, Integer> subcomponents) {
-        id = 0;
-        this.name = name;
-        this.description = description;
-        this.subcomponents = subcomponents;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public Map<Part, Integer> getSubcomponents() {
-        return subcomponents;
-    }
+public interface Part  extends Remote {
+    int getId() throws RemoteException;
+    String getName() throws RemoteException;
+    String getDescription() throws RemoteException;
+    Map<PartBean, Integer> getSubcomponents() throws RemoteException;
 }
