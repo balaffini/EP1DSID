@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="071ec0a4-e8aa-4fad-b827-bd83ae654223" name="Changes" comment="Setting up objects">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Enunciado.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/CalculatorClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/CalculatorImple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/CalculatorServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/Hello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/HelloClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/HelloServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/PartBean.java" afterDir="false" />
+    <list default="true" id="071ec0a4-e8aa-4fad-b827-bd83ae654223" name="Changes" comment="Adding README">
+      <change afterPath="$PROJECT_DIR$/src/Interface/PartRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Part.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/PartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/PartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EP1DSID.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EP1DSID.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/PartInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/PartBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Part.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/PartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/PartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +47,46 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/brunobaffini/Estudos/DSID/EP1DSID/Client",
+    "last_opened_file_path": "/Users/brunobaffini/Estudos/DSID/EP1DSID",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Client" />
       <recent name="$PROJECT_DIR$/Client/src" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Server" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.Server">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="EP1DSID" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server" />
+      <module name="EP1DSID" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Client" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -78,7 +98,7 @@
       <updated>1682971476040</updated>
       <workItem from="1682971477230" duration="2105000" />
       <workItem from="1683604054360" duration="524000" />
-      <workItem from="1683680246038" duration="2104000" />
+      <workItem from="1683680246038" duration="13184000" />
     </task>
     <task id="LOCAL-00001" summary="Setting up project">
       <created>1682971588310</created>
@@ -94,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682973608744</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Setting up objects">
+      <created>1683683426403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683683426403</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding README">
+      <created>1683683883148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683683883148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +148,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setting up project" />
     <MESSAGE value="Setting up objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting up objects" />
+    <MESSAGE value="Adding README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding README" />
   </component>
 </project>

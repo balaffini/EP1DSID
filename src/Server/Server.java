@@ -1,10 +1,12 @@
+package Server;
+
 import java.rmi.Naming;
 
 public class Server {
     Server() {
         try {
-            Part part = new PartBean();
-            Naming.rebind("RMI://127.0.0.1:1020/CalculatorService", part);
+            Part part = new Part();
+            Naming.rebind("RMI://127.0.0.1:1020/PartService", part);
         }
         catch (Exception e) {
             e.printStackTrace();
