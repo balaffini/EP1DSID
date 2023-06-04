@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="071ec0a4-e8aa-4fad-b827-bd83ae654223" name="Changes" comment="Adding README">
-      <change afterPath="$PROJECT_DIR$/src/Interface/PartRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="071ec0a4-e8aa-4fad-b827-bd83ae654223" name="Changes" comment="Setting up project folders and some properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EP1DSID.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EP1DSID.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/PartInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/PartBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Part.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/PartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/PartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface/PartRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/PartRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Part.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/PartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/PartRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,20 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/brunobaffini/Estudos/DSID/EP1DSID",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/brunobaffini/Estudos/DSID/EP1DSID&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -98,7 +93,8 @@
       <updated>1682971476040</updated>
       <workItem from="1682971477230" duration="2105000" />
       <workItem from="1683604054360" duration="524000" />
-      <workItem from="1683680246038" duration="13184000" />
+      <workItem from="1683680246038" duration="13231000" />
+      <workItem from="1685833406678" duration="12510000" />
     </task>
     <task id="LOCAL-00001" summary="Setting up project">
       <created>1682971588310</created>
@@ -128,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683683883148</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Setting up project folders and some properties">
+      <created>1684953153878</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684953153878</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +152,7 @@
     <MESSAGE value="Setting up project" />
     <MESSAGE value="Setting up objects" />
     <MESSAGE value="Adding README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding README" />
+    <MESSAGE value="Setting up project folders and some properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up project folders and some properties" />
   </component>
 </project>

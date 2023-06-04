@@ -4,9 +4,7 @@ import Interface.PartInterface;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.Collection;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Part extends UnicastRemoteObject implements PartInterface {
@@ -66,5 +64,10 @@ public class Part extends UnicastRemoteObject implements PartInterface {
 
     Boolean isPrimitive() {
         return subcomponents.isEmpty();
+    }
+
+    @Override
+    public String toString(){
+        return id + " " + name + " - " + description;
     }
 }
