@@ -8,11 +8,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Part extends UnicastRemoteObject implements PartInterface {
-    int id;
-    String name;
-    String description;
-    String repositoryName;
-    Map<PartInterface, Integer> subcomponents;
+    private int id;
+    private String name;
+    private String description;
+    private String repositoryName;
+    private Map<PartInterface, Integer> subcomponents;
 
     public Part() throws RemoteException {
         super();
@@ -49,6 +49,7 @@ public class Part extends UnicastRemoteObject implements PartInterface {
         return description;
     }
 
+    @Override
     public String getRepositoryName() {
         return repositoryName;
     }
@@ -58,11 +59,13 @@ public class Part extends UnicastRemoteObject implements PartInterface {
         return subcomponents;
     }
 
-    String getNameAndDescription() {
+    @Override
+    public String getNameAndDescription() {
         return name + ": " + description;
     }
 
-    Boolean isPrimitive() {
+    @Override
+    public Boolean isPrimitive() {
         return subcomponents.isEmpty();
     }
 

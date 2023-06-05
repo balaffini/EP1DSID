@@ -64,6 +64,8 @@ public class Client {
                         break;
                     case SHOWP:
                         System.out.println(currentPart);
+                        System.out.println("isPrimitive: " + currentPart.isPrimitive());
+                        System.out.println("repository: " + currentPart.getRepositoryName());
                         break;
                     case CLEAR_LIST:
                         currentSubParts.clear();
