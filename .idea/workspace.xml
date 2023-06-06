@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="071ec0a4-e8aa-4fad-b827-bd83ae654223" name="Changes" comment="Setting up project folders and some properties">
+    <list default="true" id="071ec0a4-e8aa-4fad-b827-bd83ae654223" name="Changes" comment="Fixing visibility modifiers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface/PartInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/PartInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interface/PartRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface/PartRepositoryInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/Part.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Part.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server/PartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/PartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,10 +63,31 @@
       <recent name="$PROJECT_DIR$/Server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="Application.Server 2">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="EP1DSID" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client.Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client.Client" />
+      <module name="EP1DSID" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server 2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="EP1DSID" />
+      <option name="PROGRAM_PARAMETERS" value="Repository" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -76,8 +99,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Server.Server" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="EP1DSID" />
+      <option name="PROGRAM_PARAMETERS" value="Repo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Server 2" />
+      <item itemvalue="Application.Server.Server" />
+      <item itemvalue="Application.Client.Client" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Server" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Client.Client" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Client" />
       </list>
@@ -94,7 +139,7 @@
       <workItem from="1682971477230" duration="2105000" />
       <workItem from="1683604054360" duration="524000" />
       <workItem from="1683680246038" duration="13231000" />
-      <workItem from="1685833406678" duration="12510000" />
+      <workItem from="1685833406678" duration="21737000" />
     </task>
     <task id="LOCAL-00001" summary="Setting up project">
       <created>1682971588310</created>
@@ -131,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684953153878</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Setting up client and most features">
+      <created>1685853279285</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685853279285</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixing visibility modifiers">
+      <created>1686001442553</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686001442553</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +212,8 @@
     <MESSAGE value="Setting up objects" />
     <MESSAGE value="Adding README" />
     <MESSAGE value="Setting up project folders and some properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting up project folders and some properties" />
+    <MESSAGE value="Setting up client and most features" />
+    <MESSAGE value="Fixing visibility modifiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing visibility modifiers" />
   </component>
 </project>

@@ -1,18 +1,23 @@
 package Server;
 
-import java.rmi.Naming;
+import Interface.PartRepositoryInterface;
+
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
 public class Server {
-    Server() {
+    private static Registry registry;
+    public Server(String name, String port) {
         try {
-            Part part = new Part();
-            Naming.rebind("RMI://127.0.0.1:1020/PartService", part);
+            PartRepositoryInterface partRepository = new PartRepository(name);
+            registry = LocateRegistry.createRegistry(Integer.parseInt(port));
+            registry.rebind(name, partRepository);
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
     public static void main(String[] args) {
-        new Server();
+        new Server(args[0], args[1]);
     }
 }

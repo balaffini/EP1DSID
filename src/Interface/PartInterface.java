@@ -10,9 +10,8 @@ public interface PartInterface extends Remote {
     String getDescription() throws RemoteException;
     Map<PartInterface, Integer> getSubcomponents() throws RemoteException;
 
-    String getNameAndDescription();
+    Boolean isPrimitive() throws RemoteException;
+    int getTotalSubcomponents() throws RemoteException;
 
-    Boolean isPrimitive();
-
-    String getRepositoryName();
+    String getRepositoryName() throws RemoteException;
 }

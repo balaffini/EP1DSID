@@ -19,6 +19,7 @@ public class Part extends UnicastRemoteObject implements PartInterface {
     }
 
     public Part(int id, String name, String description, String repositoryName, Map<PartInterface, Integer> subcomponents) throws RemoteException {
+        super();
         this.id = id;
         this.name = name;
         this.description = description;
@@ -27,6 +28,7 @@ public class Part extends UnicastRemoteObject implements PartInterface {
     }
 
     public Part(int id, String name, String description, String repositoryName) throws RemoteException {
+        super();
         this.id = id;
         this.name = name;
         this.description = description;
@@ -35,42 +37,42 @@ public class Part extends UnicastRemoteObject implements PartInterface {
     }
 
     @Override
-    public int getId() {
+    public int getId() throws RemoteException {
         return id;
     }
 
     @Override
-    public String getName() {
+    public String getName() throws RemoteException {
         return name;
     }
 
     @Override
-    public String getDescription() {
+    public String getDescription() throws RemoteException {
         return description;
     }
 
     @Override
-    public String getRepositoryName() {
+    public String getRepositoryName() throws RemoteException {
         return repositoryName;
     }
 
     @Override
-    public Map<PartInterface, Integer> getSubcomponents() {
+    public Map<PartInterface, Integer> getSubcomponents() throws RemoteException {
         return subcomponents;
     }
 
     @Override
-    public String getNameAndDescription() {
-        return name + ": " + description;
-    }
-
-    @Override
-    public Boolean isPrimitive() {
+    public Boolean isPrimitive() throws RemoteException {
         return subcomponents.isEmpty();
     }
 
     @Override
-    public String toString(){
-        return id + " " + name + " - " + description;
+    public String toString() {
+        return this.id + " " + this.name + " - " + this.description;
+    }
+
+    @Override
+    public int getTotalSubcomponents() throws RemoteException {
+        return subcomponents.size();
     }
 }

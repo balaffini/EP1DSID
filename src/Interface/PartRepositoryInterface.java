@@ -2,18 +2,21 @@ package Interface;
 
 import Server.Part;
 
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 import java.util.Map;
 
-public interface PartRepositoryInterface {
-    PartInterface getById(int id);
+public interface PartRepositoryInterface extends Remote {
+    PartInterface getById(int id) throws RemoteException;
 
-    boolean addParts(List<PartInterface> parts);
+    boolean addParts(List<PartInterface> parts) throws RemoteException;
 
-    boolean addPart(String name, String description, Map<PartInterface, Integer> subcomponents) throws RemoteException;
+    int addPart(String name, String description, Map<PartInterface, Integer> subcomponents) throws RemoteException;
 
-    List<PartInterface> getAllParts();
+    List<PartInterface> getAllParts() throws RemoteException;
 
-    String getNameAndSize();
+    int getSize() throws RemoteException;
+
+    String getName() throws RemoteException;
 }

@@ -2,13 +2,15 @@ package Client;
 
 import Interface.PartInterface;
 import Interface.PartRepositoryInterface;
-import Server.Part;
 
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.regex.PatternSyntaxException;
 
 public class Client {
     public static void main(String[] args) {
@@ -47,41 +49,86 @@ public class Client {
                         printHelp();
                         break;
                     case BIND:
+                        if(command.split(" ").length < 2) {
+                            System.out.println("Invalid arguments");
+                            break;
+                        }
                         String repositoryName = command.split(" ")[1];
-                        Registry registry = LocateRegistry.getRegistry();
-                        this.currentPartRepository = (PartRepositoryInterface) registry.lookup(repositoryName);
+                        try {
+                            Registry registry = LocateRegistry.getRegistry();
+                            this.currentPartRepository = (PartRepositoryInterface) registry.lookup(repositoryName);
+                            System.out.println("Bound to: " + repositoryName);
+                        } catch (NotBoundException e) {
+                            System.out.println("Invalid repository name");
+                        }
                         break;
                     case LISTP:
                         if(currentPartRepository == null){
                             System.out.println("No bound repository");
                             break;
                         }
-                        currentPartRepository.getAllParts().forEach(System.out::println);
+                        System.out.println(currentPartRepository.getName());
+                        System.out.println("Total parts: " + currentPartRepository.getSize());
+                        currentPartRepository.getAllParts().forEach((p) -> {
+                            try {
+                                System.out.println(p.getId() + " " + p.getName() + " - " + p.getDescription());
+                            } catch (RemoteException e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
                         break;
                     case GETP:
-                        int id = Integer.parseInt(command.split(" ")[1]);
-                        currentPart = currentPartRepository.getById(id);
+                        try {
+                            int id = Integer.parseInt(command.split(" ")[1]);
+                            if(currentPartRepository.getSize() < id){
+                                System.out.println("Invalid id");
+                                break;
+                            }
+                            currentPart = currentPartRepository.getById(id);
+                            System.out.println("Current part: " + id);
+                        } catch (PatternSyntaxException e) {
+                            System.out.println("Invalid arguments");
+                            break;
+                        }
                         break;
                     case SHOWP:
-                        System.out.println(currentPart);
+                        if(currentPart == null){
+                            System.out.println("No bound part");
+                            break;
+                        }
+                        System.out.println(currentPart.getId() + " " + currentPart.getName() + " - " + currentPart.getDescription());
                         System.out.println("isPrimitive: " + currentPart.isPrimitive());
                         System.out.println("repository: " + currentPart.getRepositoryName());
                         break;
                     case CLEAR_LIST:
                         currentSubParts.clear();
+                        System.out.println("Subpart list cleared");
                         break;
                     case ADD_SUBPART:
-                        int subPartQnt = Integer.parseInt(command.split(" ")[1]);
-                        currentSubParts.put(currentPart, subPartQnt);
+                        try {
+                            int subPartQnt = Integer.parseInt(command.split(" ")[1]);
+                            currentSubParts.put(currentPart, subPartQnt);
+                            System.out.println("Added " + subPartQnt + " parts " + currentPart.getId());
+                        } catch (PatternSyntaxException e) {
+                            System.out.println("Invalid arguments");
+                            break;
+                        }
                         break;
                     case ADDP:
+                        if(command.split(" ").length < 3) {
+                            System.out.println("Invalid arguments");
+                            break;
+                        }
                         String name = command.split(" ")[1];
                         String description = command.split(" ")[2];
-                        currentPartRepository.addPart(name, description, currentSubParts);
+                        int id = currentPartRepository.addPart(name, description, currentSubParts);
+                        System.out.println("Added part with id: " + id);
                         break;
                     case QUIT:
                         isRunning = false;
                         break;
+                    default:
+                        printHelp();
                 }
             }
         }
