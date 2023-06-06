@@ -49,17 +49,23 @@ public class Client {
                         printHelp();
                         break;
                     case BIND:
-                        if(command.split(" ").length < 2) {
+                        if(command.split(" ").length < 3) {
                             System.out.println("Invalid arguments");
                             break;
                         }
                         String repositoryName = command.split(" ")[1];
                         try {
-                            Registry registry = LocateRegistry.getRegistry();
-                            this.currentPartRepository = (PartRepositoryInterface) registry.lookup(repositoryName);
-                            System.out.println("Bound to: " + repositoryName);
-                        } catch (NotBoundException e) {
-                            System.out.println("Invalid repository name");
+                            int port = Integer.parseInt(command.split(" ")[2]);
+                            try {
+                                Registry registry = LocateRegistry.getRegistry(port);
+                                this.currentPartRepository = (PartRepositoryInterface) registry.lookup(repositoryName);
+                                System.out.println("Bound to: " + repositoryName);
+                            } catch (NotBoundException e) {
+                                System.out.println("Invalid repository name or port");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid arguments");
+                            break;
                         }
                         break;
                     case LISTP:
@@ -139,7 +145,7 @@ public class Client {
 
     static private void printHelp(){
         System.out.println("Available commands: ");
-        System.out.println(BIND + " [repositoryName]");
+        System.out.println(BIND + " [repositoryName] [port]");
         System.out.println(LISTP);
         System.out.println(GETP + " [partId]");
         System.out.println(SHOWP);

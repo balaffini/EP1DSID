@@ -12,6 +12,7 @@ public class Server {
             PartRepositoryInterface partRepository = new PartRepository(name);
             registry = LocateRegistry.createRegistry(Integer.parseInt(port));
             registry.rebind(name, partRepository);
+            System.out.println("Connected " + name + " to port " + port);
         }
         catch (Exception e) {
             e.printStackTrace();
